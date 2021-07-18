@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "863691168348",
+    "firebase_url": "https://love-peace-harmony.firebaseio.com",
+    "project_id": "love-peace-harmony",
+    "storage_bucket": "love-peace-harmony.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863691168348:android:55419258f6cfd41dc9e499",
+        "android_client_info": {
+          "package_name": "org.lovepeaceharmony.androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863691168348-vu2f7gphaj140ak7l1e9rti6fljnn1ir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQF7V_4i-7ApFSUP_OvHdVBVDdGsD_BJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863691168348-vu2f7gphaj140ak7l1e9rti6fljnn1ir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "863691168348-990dd80l6a4joakqbku2nmb90q5inqf8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.lovepeaceharmony.ios.app",
+                "app_store_id": "1355584112"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
