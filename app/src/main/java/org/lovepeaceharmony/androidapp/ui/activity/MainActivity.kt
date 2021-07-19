@@ -134,132 +134,132 @@ class MainActivity : AppCompatActivity(), OnTabChange {
 
         if (isFromProfile) {
             /*Default Profile Selected*/
-            profileFragment = ProfileFragment.newInstance()
-            profileFragment!!.setOnTabChange(this)
-            fragmentManager.beginTransaction()
-                    .replace(R.id.home_container, profileFragment).commit()
-
-            layoutProfile!!.setBackgroundColor(profileSelectedColor)
-            imageProfile!!.setColorFilter(whiteColor)
-            tvProfile!!.setTextColor(whiteColor)
+//            profileFragment = ProfileFragment.newInstance()
+//            profileFragment!!.setOnTabChange(this)
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.home_container, Fragment).commit()
+//
+//            layoutProfile!!.setBackgroundColor(profileSelectedColor)
+//            imageProfile!!.setColorFilter(whiteColor)
+//            tvProfile!!.setTextColor(whiteColor)
         } else {
             /*Default Chant Selected*/
-            val bundle = Bundle()
-            bundle.putInt(Constants.BUNDLE_TAB_INDEX, 0)
-            chantFragment = ChantFragment.newInstance()
-            chantFragment?.arguments = bundle
-            fragmentManager.beginTransaction()
-                    .replace(R.id.home_container, chantFragment).commit()
-
-            layoutChant!!.setBackgroundColor(chantSelectedColor)
-            imageChant!!.setColorFilter(whiteColor)
-            tvChant!!.setTextColor(whiteColor)
+//            val bundle = Bundle()
+//            bundle.putInt(Constants.BUNDLE_TAB_INDEX, 0)
+//            chantFragment = ChantFragment.newInstance()
+//            chantFragment?.arguments = bundle
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.home_container, chantFragment).commit()
+//
+//            layoutChant!!.setBackgroundColor(chantSelectedColor)
+//            imageChant!!.setColorFilter(whiteColor)
+//            tvChant!!.setTextColor(whiteColor)
         }
 
         layoutChant!!.setOnClickListener { view ->
-            val context: Context = this
-            val weakReferenceContext = WeakReference(context)
-            val pendingMinutes = Helper.getFloatFromPreference(context, Constants.SHARED_PREF_PENDING_MINUTES)
-            Helper.callUpdateMileStoneAsync(weakReferenceContext, pendingMinutes)
-
-            if(chantFragment == null)
-                chantFragment = ChantFragment.newInstance()
-            val bundle = Bundle()
-            bundle.putInt(Constants.BUNDLE_TAB_INDEX, 0)
-            chantFragment?.arguments = bundle
-            fragmentManager.beginTransaction()
-                    .replace(R.id.home_container, chantFragment).commit()
-
-            /*Selected*/
-            view.setBackgroundColor(chantSelectedColor)
-            imageChant!!.setColorFilter(whiteColor)
-            tvChant!!.setTextColor(whiteColor)
-
-            /*Deselected*/
-            layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
-            imageNews!!.setColorFilter(imageUnselectedColor)
-            tvNews!!.setTextColor(imageUnselectedColor)
-
-            layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
-            imageAbout!!.setColorFilter(imageUnselectedColor)
-            tvAbout!!.setTextColor(imageUnselectedColor)
-
-            layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
-            imageProfile!!.setColorFilter(imageUnselectedColor)
-            tvProfile!!.setTextColor(imageUnselectedColor)
+//            val context: Context = this
+//            val weakReferenceContext = WeakReference(context)
+//            val pendingMinutes = Helper.getFloatFromPreference(context, Constants.SHARED_PREF_PENDING_MINUTES)
+//            Helper.callUpdateMileStoneAsync(weakReferenceContext, pendingMinutes)
+//
+//            if(chantFragment == null)
+//                chantFragment = ChantFragment.newInstance()
+//            val bundle = Bundle()
+//            bundle.putInt(Constants.BUNDLE_TAB_INDEX, 0)
+//            chantFragment?.arguments = bundle
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.home_container, chantFragment).commit()
+//
+//            /*Selected*/
+//            view.setBackgroundColor(chantSelectedColor)
+//            imageChant!!.setColorFilter(whiteColor)
+//            tvChant!!.setTextColor(whiteColor)
+//
+//            /*Deselected*/
+//            layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
+//            imageNews!!.setColorFilter(imageUnselectedColor)
+//            tvNews!!.setTextColor(imageUnselectedColor)
+//
+//            layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
+//            imageAbout!!.setColorFilter(imageUnselectedColor)
+//            tvAbout!!.setTextColor(imageUnselectedColor)
+//
+//            layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
+//            imageProfile!!.setColorFilter(imageUnselectedColor)
+//            tvProfile!!.setTextColor(imageUnselectedColor)
         }
 
         layoutNews!!.setOnClickListener { view ->
-            newsFragment = NewsFragment.newInstance()
-            fragmentManager.beginTransaction()
-                    .replace(R.id.home_container, newsFragment).commit()
-
-            /*Selected*/
-            view.setBackgroundColor(newsSelectedColor)
-            imageNews!!.setColorFilter(whiteColor)
-            tvNews!!.setTextColor(whiteColor)
-
-            /*Deselected*/
-            layoutChant!!.setBackgroundColor(layoutDeselectedColor) //Chant
-            imageChant!!.setColorFilter(imageUnselectedColor)
-            tvChant!!.setTextColor(imageUnselectedColor)
-
-            layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
-            imageAbout!!.setColorFilter(imageUnselectedColor)
-            tvAbout!!.setTextColor(imageUnselectedColor)
-
-            layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
-            imageProfile!!.setColorFilter(imageUnselectedColor)
-            tvProfile!!.setTextColor(imageUnselectedColor)
+//            newsFragment = NewsFragment.newInstance()
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.home_container, newsFragment).commit()
+//
+//            /*Selected*/
+//            view.setBackgroundColor(newsSelectedColor)
+//            imageNews!!.setColorFilter(whiteColor)
+//            tvNews!!.setTextColor(whiteColor)
+//
+//            /*Deselected*/
+//            layoutChant!!.setBackgroundColor(layoutDeselectedColor) //Chant
+//            imageChant!!.setColorFilter(imageUnselectedColor)
+//            tvChant!!.setTextColor(imageUnselectedColor)
+//
+//            layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
+//            imageAbout!!.setColorFilter(imageUnselectedColor)
+//            tvAbout!!.setTextColor(imageUnselectedColor)
+//
+//            layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
+//            imageProfile!!.setColorFilter(imageUnselectedColor)
+//            tvProfile!!.setTextColor(imageUnselectedColor)
         }
 
         layoutAbout!!.setOnClickListener { view ->
-            val aboutFragment = AboutFragment.newInstance()
-            fragmentManager.beginTransaction()
-                    .replace(R.id.home_container, aboutFragment).commit()
-
-            /*Selected*/
-            view.setBackgroundColor(aboutSelectedColor)
-            imageAbout!!.setColorFilter(whiteColor)
-            tvAbout!!.setTextColor(whiteColor)
-
-            /*Deselected*/
-            layoutChant!!.setBackgroundColor(layoutDeselectedColor) // Chant
-            imageChant!!.setColorFilter(imageUnselectedColor)
-            tvChant!!.setTextColor(imageUnselectedColor)
-
-            layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
-            imageNews!!.setColorFilter(imageUnselectedColor)
-            tvNews!!.setTextColor(imageUnselectedColor)
-
-            layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
-            imageProfile!!.setColorFilter(imageUnselectedColor)
-            tvProfile!!.setTextColor(imageUnselectedColor)
+//            val aboutFragment = AboutFragment.newInstance()
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.home_container, aboutFragment).commit()
+//
+//            /*Selected*/
+//            view.setBackgroundColor(aboutSelectedColor)
+//            imageAbout!!.setColorFilter(whiteColor)
+//            tvAbout!!.setTextColor(whiteColor)
+//
+//            /*Deselected*/
+//            layoutChant!!.setBackgroundColor(layoutDeselectedColor) // Chant
+//            imageChant!!.setColorFilter(imageUnselectedColor)
+//            tvChant!!.setTextColor(imageUnselectedColor)
+//
+//            layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
+//            imageNews!!.setColorFilter(imageUnselectedColor)
+//            tvNews!!.setTextColor(imageUnselectedColor)
+//
+//            layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
+//            imageProfile!!.setColorFilter(imageUnselectedColor)
+//            tvProfile!!.setTextColor(imageUnselectedColor)
         }
 
         layoutProfile!!.setOnClickListener { view ->
-            profileFragment = ProfileFragment.newInstance()
-            profileFragment!!.setOnTabChange(this@MainActivity)
-            fragmentManager.beginTransaction()
-                    .replace(R.id.home_container, profileFragment).commit()
-
-            /*Selected*/
-            view.setBackgroundColor(profileSelectedColor)
-            imageProfile!!.setColorFilter(whiteColor)
-            tvProfile!!.setTextColor(whiteColor)
-
-            /*Deselected*/
-            layoutChant!!.setBackgroundColor(layoutDeselectedColor) // Chant
-            imageChant!!.setColorFilter(imageUnselectedColor)
-            tvChant!!.setTextColor(imageUnselectedColor)
-
-            layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
-            imageNews!!.setColorFilter(imageUnselectedColor)
-            tvNews!!.setTextColor(imageUnselectedColor)
-
-            layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
-            imageAbout!!.setColorFilter(imageUnselectedColor)
-            tvAbout!!.setTextColor(imageUnselectedColor)
+//            profileFragment = ProfileFragment.newInstance()
+//            profileFragment!!.setOnTabChange(this@MainActivity)
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.home_container, profileFragment).commit()
+//
+//            /*Selected*/
+//            view.setBackgroundColor(profileSelectedColor)
+//            imageProfile!!.setColorFilter(whiteColor)
+//            tvProfile!!.setTextColor(whiteColor)
+//
+//            /*Deselected*/
+//            layoutChant!!.setBackgroundColor(layoutDeselectedColor) // Chant
+//            imageChant!!.setColorFilter(imageUnselectedColor)
+//            tvChant!!.setTextColor(imageUnselectedColor)
+//
+//            layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
+//            imageNews!!.setColorFilter(imageUnselectedColor)
+//            tvNews!!.setTextColor(imageUnselectedColor)
+//
+//            layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
+//            imageAbout!!.setColorFilter(imageUnselectedColor)
+//            tvAbout!!.setTextColor(imageUnselectedColor)
         }
 
 
@@ -415,65 +415,65 @@ class MainActivity : AppCompatActivity(), OnTabChange {
     }
 
     private fun navigateChatMileStone() {
-        val context: Context = this
-        val weakReferenceContext = WeakReference(context)
-        val pendingMinutes = Helper.getFloatFromPreference(context, Constants.SHARED_PREF_PENDING_MINUTES)
-        Helper.callUpdateMileStoneAsync(weakReferenceContext, pendingMinutes)
-
-        val fragmentManager = supportFragmentManager
-        val bundle = Bundle()
-        bundle.putInt(Constants.BUNDLE_TAB_INDEX, 2)
-        if(chantFragment == null)
-            chantFragment = ChantFragment.newInstance()
-        chantFragment!!.arguments = bundle
-        fragmentManager.beginTransaction()
-                .replace(R.id.home_container, chantFragment).commit()
-
-        /*Selected*/
-        layoutChant!!.setBackgroundColor(chantSelectedColor)
-        imageChant!!.setColorFilter(whiteColor)
-        tvChant!!.setTextColor(whiteColor)
-
-        /*Deselected*/
-        layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
-        imageNews!!.setColorFilter(imageUnselectedColor)
-        tvNews!!.setTextColor(imageUnselectedColor)
-
-        layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
-        imageAbout!!.setColorFilter(imageUnselectedColor)
-        tvAbout!!.setTextColor(imageUnselectedColor)
-
-        layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
-        imageProfile!!.setColorFilter(imageUnselectedColor)
-        tvProfile!!.setTextColor(imageUnselectedColor)
+//        val context: Context = this
+//        val weakReferenceContext = WeakReference(context)
+//        val pendingMinutes = Helper.getFloatFromPreference(context, Constants.SHARED_PREF_PENDING_MINUTES)
+//        Helper.callUpdateMileStoneAsync(weakReferenceContext, pendingMinutes)
+//
+//        val fragmentManager = supportFragmentManager
+//        val bundle = Bundle()
+//        bundle.putInt(Constants.BUNDLE_TAB_INDEX, 2)
+//        if(chantFragment == null)
+//            chantFragment = ChantFragment.newInstance()
+//        chantFragment!!.arguments = bundle
+//        fragmentManager.beginTransaction()
+//                .replace(R.id.home_container, chantFragment).commit()
+//
+//        /*Selected*/
+//        layoutChant!!.setBackgroundColor(chantSelectedColor)
+//        imageChant!!.setColorFilter(whiteColor)
+//        tvChant!!.setTextColor(whiteColor)
+//
+//        /*Deselected*/
+//        layoutNews!!.setBackgroundColor(layoutDeselectedColor) //News
+//        imageNews!!.setColorFilter(imageUnselectedColor)
+//        tvNews!!.setTextColor(imageUnselectedColor)
+//
+//        layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
+//        imageAbout!!.setColorFilter(imageUnselectedColor)
+//        tvAbout!!.setTextColor(imageUnselectedColor)
+//
+//        layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
+//        imageProfile!!.setColorFilter(imageUnselectedColor)
+//        tvProfile!!.setTextColor(imageUnselectedColor)
     }
 
     private fun navigateNewsFavorite() {
-        val fragmentManager = supportFragmentManager
-        newsFragment = NewsFragment.newInstance()
-        val bundle = Bundle()
-        bundle.putInt(Constants.BUNDLE_TAB_INDEX, 2)
-        newsFragment!!.arguments = bundle
-        fragmentManager.beginTransaction()
-                .replace(R.id.home_container, newsFragment).commit()
-
-        /*Selected*/
-        layoutNews!!.setBackgroundColor(newsSelectedColor)
-        imageNews!!.setColorFilter(whiteColor)
-        tvNews!!.setTextColor(whiteColor)
-
-        /*Deselected*/
-        layoutChant!!.setBackgroundColor(layoutDeselectedColor) //Chant
-        imageChant!!.setColorFilter(imageUnselectedColor)
-        tvChant!!.setTextColor(imageUnselectedColor)
-
-        layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
-        imageAbout!!.setColorFilter(imageUnselectedColor)
-        tvAbout!!.setTextColor(imageUnselectedColor)
-
-        layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
-        imageProfile!!.setColorFilter(imageUnselectedColor)
-        tvProfile!!.setTextColor(imageUnselectedColor)
+//        val fragmentManager = supportFragmentManager
+//        newsFragment = NewsFragment.newInstance()
+//        val bundle = Bundle()
+//        bundle.putInt(Constants.BUNDLE_TAB_INDEX, 2)
+//        newsFragment!!.arguments = bundle
+//        fragmentManager.beginTransaction()
+//                .replace(R.id.home_container, newsFragment).commit()
+//
+//        /*Selected*/
+//        layoutNews!!.setBackgroundColor(newsSelectedColor)
+//        imageNews!!.setColorFilter(whiteColor)
+//        tvNews!!.setTextColor(whiteColor)
+//
+//        /*Deselected*/
+//        layoutChant!!.setBackgroundColor(layoutDeselectedColor) //Chant
+//        imageChant!!.setColorFilter(imageUnselectedColor)
+//        tvChant!!.setTextColor(imageUnselectedColor)
+//
+//        layoutAbout!!.setBackgroundColor(layoutDeselectedColor) //About
+//        imageAbout!!.setColorFilter(imageUnselectedColor)
+//        tvAbout!!.setTextColor(imageUnselectedColor)
+//
+//        layoutProfile!!.setBackgroundColor(layoutDeselectedColor) //Profile
+//        imageProfile!!.setColorFilter(imageUnselectedColor)
+//        tvProfile!!.setTextColor(imageUnselectedColor)
     }
 
     override fun onDestroy() {

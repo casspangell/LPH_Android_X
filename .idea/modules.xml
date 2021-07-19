@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LPH_Android_X.iml" filepath="$PROJECT_DIR$/.idea/modules/LPH_Android_X.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LPH_Android_X.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LPH_Android_X.app.iml" />
+    </modules>
+  </component>
+</project>
